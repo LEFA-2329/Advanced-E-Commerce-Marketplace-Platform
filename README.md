@@ -6,6 +6,22 @@
 **StoreHub** is a comprehensive, modern e-commerce marketplace platform designed to connect customers, store managers, and business owners. It features advanced AI-driven personalization, multi-role dashboards, real-time analytics, and seamless shopping experiences. Built with PHP and PostgreSQL, StoreHub powers a dynamic online shopping ecosystem with cutting-edge features like AI recommendations, intelligent chat support, and business intelligence tools.
 
 ## ScreenShots
+(Simple Website Cover before Web App)
+<img width="640" height="398" alt="image" src="https://github.com/user-attachments/assets/880b0188-fb44-4a65-904e-15f63cf40212" />
+<img width="781" height="403" alt="image" src="https://github.com/user-attachments/assets/56258e9b-a515-47f9-b5db-e770dc4d67a9" />
+
+
+
+
+Unified Login(Owner/Mnager/Customers)
+<img width="656" height="362" alt="image" src="https://github.com/user-attachments/assets/22f6603d-89c2-48c1-b86b-538a005309fb" />
+
+(Manager Product Management and other operations such as (Making Promotions/Dashboard/History)
+
+<img width="958" height="416" alt="image" src="https://github.com/user-attachments/assets/03b1ea05-51d2-43a0-83ee-bcda2bd67bcd" />
+<img width="953" height="410" alt="image" src="https://github.com/user-attachments/assets/f120a72a-2781-4dbd-a4d8-4c24fa10e7d2" />
+
+
 
 
 
