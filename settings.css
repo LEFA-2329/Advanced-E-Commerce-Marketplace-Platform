@@ -1,0 +1,196 @@
+/* Styles for Settings Page */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: ghostwhite;
+    color: #212529;
+}
+
+.sidebar {
+    width: 210px;
+    background-color: ghostwhite;
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0.5rem;
+}
+
+.sidebar .user-info {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar .user-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 10px rgb(0, 109, 103);
+    transition: all 1s ease-in;
+    transform: scale(1.1);
+}
+
+.sidebar .user-info img:hover {
+    transform: scale(1.5) rotateZ(360deg);
+    box-shadow: 0 4px 20px rgb(133, 255, 228);
+}
+
+.sidebar .user-info div {
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+.sidebar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, transparent, purple, rgb(51, 2, 58), rgb(1, 247, 255), rgb(1, 82, 71), rgb(0, 39, 37), transparent, transparent, transparent, lightblue, lightblue, midnightblue, midnightblue, purple, rgb(49, 2, 49), rgb(46, 1, 46));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400% 400%;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: logo-animation 60s ease-in-out infinite;
+}
+
+@keyframes logo-animation {
+    0% {
+        background-position: 0;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0;
+    }
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    margin-top: 0.3rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+    background-color: #00aaa2;
+    color: white;
+}
+
+.main-content {
+    margin-left: 240px;
+    margin-top: 1rem;
+    padding: 20px;
+    min-height: 95vh;
+    width: 100%;
+    max-width: 83%;
+    box-sizing: border-box;
+    background: ghostwhite;
+    box-shadow: 0 5px 10px #00b39541;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+}
+
+.main-content:hover {
+    box-shadow: 0 5px 10px #5ffff252;
+}
+
+h2 {
+    color: #aaa;
+    margin-bottom: 20px;
+    border-top: 3px solid rgb(0, 156, 196);
+    padding: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    color: #00969b;
+    margin-top: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+form {
+    margin-bottom: 2rem;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #00969b;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+    width: 90%;
+    padding: 8px 12px;
+    border: none;
+    border-bottom: 2px solid rgb(202, 202, 202);
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="file"]:focus {
+    border-bottom: 2px solid rgb(0, 255, 0);
+    outline: none;
+}
+
+button {
+    background-color: #00968e;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00c7bd;
+}
+
+.error-messages {
+    color: red;
+    margin-bottom: 15px;
+}
+
+.success-message {
+    color: green;
+    margin-bottom: 15px;
+}
+
+.flex-row-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.flex-row-container section {
+    flex: 1 1 45%;
+    box-sizing: border-box;
+}

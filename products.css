@@ -1,0 +1,417 @@
+/* Styles for Product Management Page */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: ghostwhite;
+    color: #212529;
+    /* overflow-y: scroll; */
+}
+
+.sidebar {
+    width: 210px;
+    background-color: ghostwhite;
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:0.5rem;
+}
+.sidebar .profile-image{
+    width: 90px;
+    height: 90px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    box-shadow:0px 4px 10px rgb(0, 109, 103);
+    transition:all 1s ease-in;
+    transform:scale(1.1);
+}
+
+.sidebar .profile-image:hover{
+transform:scale(1.5) rotateZ(360deg);
+box-shadow:0 4px 20px rgb(133, 255, 228);
+}
+.sidebar .profile-name{
+    font-weight:bold; 
+    color: #4c5e06;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.616);
+}
+
+.sidebar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background:linear-gradient(90deg,transparent,purple,rgb(51, 2, 58),rgb(1, 247, 255),rgb(1, 82, 71),rgb(0, 39, 37),transparent,transparent,transparent,lightblue,lightblue,midnightblue,midnightblue,purple,rgb(49, 2, 49),rgb(46, 1, 46));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    background-size: 400% 400%;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: logo-animation 60s ease-in-out infinite;
+}
+
+@keyframes logo-animation {
+    0% {
+        background-position: 0 ;
+    }
+    50% {
+        background-position: 100% ;
+    }
+    100% {
+        background-position: 0 ;
+    }
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    margin-top:0.3rem;
+    border-radius:5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav a i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+   
+}
+
+ .sidebar nav a:hover {
+    background-color: #00aaa2;
+    color: white;
+}
+
+.sidebar .logout{
+color:rgb(0, 255, 0);
+background:white;
+}
+.sidebar .logout:hover{
+    color:red;
+    background:black;
+}
+
+.sidebar .settings{
+    color:silver;
+   background:ghostwhite;
+}
+.sidebar .settings:hover{
+    color:silver;
+    background:ghostwhite;
+    cursor:default;
+   
+}
+
+.main-content {
+    margin-left: 240px;
+    margin-top:1rem;
+    padding: 20px;
+    min-height: 95vh;
+    width:100%;
+    max-width:83%;
+    box-sizing: border-box;
+    background:ghostwhite;
+    box-shadow:0 5px 10px #00b39541;
+   border-radius: 30px;
+    transition:all 0.4s ease;
+}
+.main-content:hover{
+    box-shadow:0 5px 10px #5ffff252;
+}
+.main-content .product-container{
+   padding:1.5rem;
+  border-radius: 20px;
+   overflow-y:hidden;
+   transition:all 0.4s ease;
+    overflow-x:hidden;
+}
+
+h2 {
+    color: #aaa;
+    margin-bottom: 20px;
+    border-top:3px solid rgb(0, 156, 196);
+    padding:1.5rem;
+    padding-bottom:0.5rem;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 12px;
+    margin-bottom:1rem;
+    font-size: 1rem;
+    border: none;
+    margin-right: 10px;
+    background:none;
+    border-bottom:2px solid rgba(0, 0, 0, 0.274);
+    box-sizing: border-box;
+}
+.search-bar:focus {
+    outline: none;
+    border-bottom: 2px solid #66ff00;
+}
+.search-btn{
+    background:none;
+    border:none;
+    padding:0.5rem 0.7rem;
+border-radius:50%;
+    font-size:1.2rem;
+    font-weight:bold;
+    color:#aaa;
+    margin-left:1rem;
+    transition:all 0.4s ease;
+}
+.search-btn:hover{
+    color:rgb(0, 247, 0);
+    background:white;
+}
+.btn-add {
+    text-decoration: none;
+    position: absolute; 
+    right: 0; 
+    top: 0; 
+    height: 40px;  
+    margin:1.6rem;
+    font-weight: bold; 
+    color: white;
+    background-color: #027f83;
+    box-shadow: 0 4px 12px rgb(1, 163, 163); 
+    border-radius: 6px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+    background-color: #00bddf;
+    box-shadow: 0 4px 12px rgb(0, 255, 255); 
+}
+/*products styling section*/
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-bottom: 15px;
+    /* Removed max-height and overflow to avoid content clipping */
+}
+.product-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    transform: scale(1.05);
+}
+.product-image {
+    width: 90%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+.product-image:hover {
+    transform: scale(1.05);
+}
+.no-image {
+    width: 100%;
+    height: 180px;
+    background: #6c757d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: center;
+    color: rgb(0, 136, 141);
+}
+.product-description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #a8a8a8;
+    margin-bottom: 10px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+.product-price,
+.product-stock {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666666;
+}
+.product-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.product-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/*action buttons styles*/
+.btn-edit{
+    color:ghostwhite;
+    background:darkslategray;
+    border:none;
+    transition:all 0.4s ease-in-out;
+}
+.btn-edit:hover{
+    transform:scale(2);
+    background:none;
+    color:darkslategray;
+    outline:none;
+}
+
+.btn-delete{
+    color:ghostwhite;
+    background:darkred;
+    border:none;
+    transition:all 0.4s ease-in-out;
+}
+.btn-delete:hover{
+    transform:scale(2);
+    background:none;
+    color:darkred;
+    outline:none;
+}
+
+
+/* Modal Popup Styles */
+.modal {
+display: none; /* Hidden by default */
+position: fixed;
+z-index: 1050;
+left: 0;
+top: 0;
+width: 100%;
+height: 90%;
+overflow: auto;
+background-color: rgba(0,0,0,0.5);
+transition: opacity 0.3s ease;
+}
+
+.modal.show {
+display: block;
+opacity: 1;
+}
+
+.modal-content {
+background-color: ghostwhite;
+margin: 5% auto;
+padding: 20px 30px;
+border:none;
+width: 90%;
+max-width: 600px;
+border-radius: 8px;
+position: relative;
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.651);
+animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+from {
+opacity: 0;
+transform: translateY(-20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.modal-close {
+color: #aaa;
+position: absolute;
+top: 12px;
+right: 15px;
+font-size: 28px;
+font-weight: bold;
+cursor: pointer;
+transition: color 0.3s ease;
+}
+
+.modal form .form-label {
+font-weight: 600;
+margin-bottom: 6px;
+display: block;
+color: #00969b;
+}
+
+.modal form .form-control {
+width: 90%;
+padding: 8px 12px;
+margin-bottom: 7px;
+border:none;
+border-bottom:2px solid rgb(202, 202, 202);
+font-size: 1rem;
+box-sizing: border-box;
+transition: border-color 0.3s ease;
+}
+
+.modal form .form-control:focus {
+border-bottom:2px solid rgb(0, 255, 0);
+outline: none;
+}
+
+.modal form button.btn-success {
+background-color: #00968e;
+border: none;
+color: white;
+padding: 10px 20px;
+font-weight: 600;
+border-radius: 6px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.modal form button.btn-success:hover {
+background-color: #00c7bd;
+}
+
+.modal form button.btn-secondary {
+background-color: #6b0808;
+border: none;
+color: white;
+padding: 10px 20px;
+font-weight: 600;
+border-radius: 6px;
+cursor: pointer;
+margin-left: 10px;
+transition: background-color 0.3s ease;
+}
+
+.modal form button.btn-secondary:hover {
+background-color: #c70000;
+}

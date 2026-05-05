@@ -1,0 +1,206 @@
+/* Modern CSS styling for Owner Dashboard */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: ghostwhite/*#f0f2f5*/;
+    height: 100%;
+    box-sizing: border-box;
+   
+}
+
+
+.sidebar {
+    width: 210px;
+    background-color: ghostwhite;
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:0.5rem;
+}
+.sidebar .profile-image{
+    width: 90px;
+    height: 90px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    box-shadow:0px 4px 10px rgb(0, 109, 103);
+    transition:all 1s ease-in;
+    transform:scale(1.1);
+}
+.sidebar .profile-image:hover{
+transform:scale(1.5) rotateZ(360deg);
+box-shadow:0 4px 20px rgb(0, 255, 234);
+}
+.sidebar .profile-name{
+    font-weight:bold; 
+    color: #4c5e06;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.616);
+}
+
+.sidebar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background:linear-gradient(90deg,transparent,purple,rgb(51, 2, 58),rgb(1, 247, 255),rgb(1, 82, 71),rgb(0, 39, 37),transparent,transparent,transparent,Goldenrod,yellow,lightgreen,lightgreen,green,lightblue,lightblue,midnightblue,midnightblue,purple,rgb(49, 2, 49),rgb(46, 1, 46));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    background-size: 400% 400%;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: logo-animation 60s ease-in-out infinite;
+}
+
+@keyframes logo-animation {
+    0% {
+        background-position: 0 ;
+    }
+    50% {
+        background-position: 100% ;
+    }
+    100% {
+        background-position: 0 ;
+    }
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    margin-top:0.3rem;
+    border-radius:5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav a i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+   
+}
+
+.sidebar nav a.active, .sidebar nav a:hover {
+    background-color: #00aaa2;
+    color: white;
+}
+
+.sidebar .logout{
+color:rgb(0, 255, 0);
+background:white;
+}
+.sidebar .logout:hover{
+    color:red;
+    background:black;
+}
+.sidebar .settings{
+    color:silver;
+    background:ghostwhite;
+}
+.sidebar .settings:hover{
+    color:silver;
+    background:ghostwhite;
+    cursor:default;
+}
+
+.main-content {
+    margin-left: 240px;
+  margin-top:1rem;
+    padding: 20px;
+    height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    background:ghostwhite;
+    box-shadow:0 5px 10px #00b39541;
+   border-radius: 30px;
+    width:100%;
+    max-width:83%;
+    transition:all 0.4s ease;
+}
+.main-content:hover{
+    box-shadow:0 5px 10px #5ffff27e;
+}
+
+h2 {
+    color: #aaa;
+    margin-bottom: 20px;
+    border-top:3px solid rgb(0, 156, 196);
+    padding:1.5rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 5px;
+    margin-top: 15px;
+    border-bottom:3px solid #aaaaaa56;
+}
+
+.dashboard-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #01757e 100%);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.253);
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    -webkit-backdrop-filter: saturate(180%) blur(8px);
+    backdrop-filter: saturate(180%) blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    min-width: 120px;
+    max-width: 160px;
+    margin-top:1.5rem;
+    margin-bottom:3rem;
+}
+
+.dashboard-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.356);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.dashboard-card h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #005a75;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.dashboard-card p {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    color: #033327;
+    line-height: 1.3;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.7);
+}
+
+
+.dashboard-card .btn {
+    text-decoration: none;
+    padding: 6px 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+   
+}
+
+.dashboard-card .btn-primary {
+    background-color: #0d6975;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.dashboard-card .btn-primary:hover {
+    background-color: #008f99;
+    box-shadow: 0 6px 12px rgba(2, 232, 248, 0.651);
+}
