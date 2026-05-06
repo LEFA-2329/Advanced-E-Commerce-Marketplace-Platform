@@ -297,12 +297,6 @@ php test_tracking.php
 
 This project is open-source and available 
 
-## Contact
-
-**StoreHub Team**  
- [contact@storehub.com](mailto:contact@storehub.com)  
- [storehub.com](http://localhost/store-F/)  
-
 
 ** Star us on GitHub if you found this helpful!**  
 ** Thanks for using StoreHub!**
