@@ -100,7 +100,7 @@ AI recomment automatically based on user searches as well as giving updates abou
 
 ## Features
 
-### Customer Features
+### Customers Features
 ```
 Shopping Experience
 - Province & age-group personalized product discovery
