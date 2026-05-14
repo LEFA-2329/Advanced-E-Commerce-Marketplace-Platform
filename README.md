@@ -1,7 +1,7 @@
 # StoreHub - Advanced E-Commerce Marketplace Platform
 
 
-## Overview
+## Overview OF THE STOREHUB
 
 **StoreHub** is a comprehensive, modern e-commerce marketplace platform designed to connect customers, store managers, and business owners. It features advanced AI-driven personalization, multi-role dashboards, real-time analytics, and seamless shopping experiences. Built with PHP and PostgreSQL, StoreHub powers a dynamic online shopping ecosystem with cutting-edge features like AI recommendations, intelligent chat support, and business intelligence tools.
 
